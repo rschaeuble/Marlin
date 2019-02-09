@@ -375,7 +375,7 @@
 #define TEMP_SENSOR_3 0
 #define TEMP_SENSOR_4 0
 #define TEMP_SENSOR_5 0
-#define TEMP_SENSOR_BED 1
+#define TEMP_SENSOR_BED 801
 #define TEMP_SENSOR_CHAMBER 0
 #define CHAMBER_HEATER_PIN -1  // On/off pin for enclosure heating system
 
@@ -418,7 +418,7 @@
 #define HEATER_3_MAXTEMP 275
 #define HEATER_4_MAXTEMP 275
 #define HEATER_5_MAXTEMP 275
-#define BED_MAXTEMP 125
+#define BED_MAXTEMP 110
 
 //===========================================================================
 //============================= PID Settings ================================

@@ -125,6 +125,9 @@
 #if ANY_THERMISTOR_IS(666) // beta25 = UNK, R25 = 200K, Pull-up = 10 kOhm, "Unidentified 200K NTC thermistor (Einstart S)"
   #include "thermistor_666.h"
 #endif
+#if ANY_THERMISTOR_IS(801)
+  #include "thermistor_801.h"
+#endif
 #if ANY_THERMISTOR_IS(1010) // Pt1000 with 1k0 pullup
   #include "thermistor_1010.h"
 #endif

@@ -105,6 +105,9 @@
 #elif THERMISTOR_ID == 67
   #define THERMISTOR_NAME "SliceEng 450°C"
 
+#elif THERMISTOR_ID == 801
+  #define THERMISTOR_NAME "Custom"
+
 // Dummies for dev testing
 #elif THERMISTOR_ID == 998
   #define THERMISTOR_NAME "Dummy 1"
