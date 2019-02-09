@@ -505,7 +505,8 @@
 // @section lcd
 
 #if ENABLED(ULTIPANEL)
-  #define MANUAL_FEEDRATE {50*60, 50*60, 4*60, 0} // Feedrates for manual moves along X, Y, Z, E from panel
+  // The extruder feedrate is equivalent to about 50 mm/sec with 0.2 mm layer hight and 0.48 mm line width.
+  #define MANUAL_FEEDRATE {50*60, 50*60, 4*60, 2*60} // Feedrates for manual moves along X, Y, Z, E from panel
   #define MANUAL_E_MOVES_RELATIVE // Show LCD extruder moves as relative rather than absolute positions
   #define ULTIPANEL_FEEDMULTIPLY  // Comment to disable setting feedrate multiplier via encoder
 #endif
