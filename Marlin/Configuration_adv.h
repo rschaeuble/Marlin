@@ -1179,6 +1179,18 @@
    */
   #define HYBRID_THRESHOLD
 
+  /** NOTE:
+   *
+   * When running in stealthChop mode, stopping the motor very abruptly will cause it to turn off.
+   * See https://github.com/KevinOConnor/klipper/issues/196#issuecomment-383122655 for details.
+   * This is especially likely to happen with the extruder during retraction/unretraction.
+   * Setting the threshold just a little bit higher than extraction speed during printing avoid this.
+   *
+   * Printing at 125 mm/sec (which is unrealistically high) with 0.2 mm layer height and 0.48 mm line
+   * width requires an extrusion speed of 4.99 mm/sec, so a threshold of 5 should be fine.
+   * This keeps noise down during printing move, switching to the louder spreadCycle mode only
+   * for retractions.
+   */
   #define X_HYBRID_THRESHOLD     160  // [mm/s]
   #define X2_HYBRID_THRESHOLD    100
   #define Y_HYBRID_THRESHOLD     160
