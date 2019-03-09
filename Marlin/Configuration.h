@@ -690,16 +690,20 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 415 }
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4[, E5]]]]]
  */
+// With the Bondtech bmg (415 steps/mm), 50 mm/sec are about 390 rpm.
+// Torque starts to decrease at about this speed when using the TMC2208 stepper drivers.
+ #define DEFAULT_MAX_FEEDRATE_E 50
+
 // original values:
 //#define DEFAULT_MAX_FEEDRATE        { 500, 500, 5, 25 }
-#define DEFAULT_MAX_FEEDRATE          { 500, 500, 5, 100 }
+#define DEFAULT_MAX_FEEDRATE          { 500, 500, 5, DEFAULT_MAX_FEEDRATE_E }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -961,7 +965,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
